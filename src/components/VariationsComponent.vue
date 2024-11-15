@@ -1,34 +1,23 @@
 <script setup>
+import photo from "@/assets/img/variatn.png"
 
+const variations = [
+  { img: photo, text: 'покупка' },
+  { img: photo, text: 'доставка' },
+  { img: photo, text: 'pre-loved' },
+  { img: photo, text: 'custom' },
+  { img: photo, text: 'custom' },
+  { img: photo, text: 'консьерж' },
+];
 </script>
 
 <template>
-   <div class="variations">
-   <div class="variation__details">
-     <img src="@/assets/img/variatn.png" alt="">
-     <h6>покупка</h6>
-   </div>
-     <div class="variation__details">
-       <img src="@/assets/img/dostavka.png" alt="">
-       <h6>доставка</h6>
-     </div>
-     <div class="variation__details">
-       <img src="@/assets/img/pre.png" alt="">
-       <h6>pre-loved</h6>
-     </div>
-     <div class="variation__details">
-       <img src="@/assets/img/custom.png" alt="">
-       <h6>custom</h6>
-     </div>
-     <div class="variation__details">
-       <img src="@/assets/img/custom2.png" alt="">
-       <h6>custom</h6>
-     </div>
-     <div class="variation__details">
-       <img src="@/assets/img/cons.png" alt="">
-       <h6>консьерж</h6>
-     </div>
-   </div>
+  <div class="variations">
+    <div v-for="(variation, index) in variations" :key="index" class="variation__details">
+      <img :src="variation.img" alt="" />
+      <h6>{{ variation.text }}</h6>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -37,7 +26,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .variation__details {
   display: flex;

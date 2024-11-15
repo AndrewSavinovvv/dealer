@@ -1,5 +1,5 @@
 <script setup>
-import TopComponent from "@/components/HeaderComponent.vue";
+import TopComponent from "@/components/TopComponent.vue";
 </script>
 
 <template>

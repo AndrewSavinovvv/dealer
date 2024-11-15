@@ -8,9 +8,11 @@ import PopularComponent from "@/components/PopularComponent.vue";
 
 <template>
   <MainComponent></MainComponent>
-  <VariationsComponent></VariationsComponent>
-  <PopularComponent></PopularComponent>
-  <CategoriesComponent></CategoriesComponent>
+  <div class="container">
+    <VariationsComponent></VariationsComponent>
+    <PopularComponent></PopularComponent>
+    <CategoriesComponent></CategoriesComponent>
+  </div>
 </template>
 
 <style scoped>

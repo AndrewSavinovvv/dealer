@@ -6,10 +6,10 @@ import item from "@/assets/img/red.png";
 import secondItem from "@/assets/img/white.png";
 
 const products = [
-  { image: item, price: '21 999₽' },
-  { image: secondItem, price: '21 999₽' },
-  { image: item, price: '21 999₽' },
-  { image: secondItem, price: '21 999₽' },
+  { image: item, price: '21 999₽', label: "HOT" },
+  { image: secondItem, price: '21 999₽', label: "PRE-LOVER" },
+  { image: item, price: '21 999₽', label: "-40%" },
+  { image: secondItem, price: '21 999₽' , label: "HOT"},
 ];
 
 const isMobile = computed(() => window.innerWidth <= 768);
@@ -36,8 +36,6 @@ const isMobile = computed(() => window.innerWidth <= 768);
 <style scoped>
 .popular {
   margin-top: 115px;
-  padding-left: 120px;
-  margin-right: 120px;
   position: relative;
 }
 

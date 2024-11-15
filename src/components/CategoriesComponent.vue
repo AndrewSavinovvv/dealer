@@ -1,5 +1,12 @@
 <script setup>
 
+
+const categories = [
+  { title: "одежда"},
+  { title: "обувь"},
+  { title: "акссесуары"},
+  { title: "сумки"},
+]
 </script>
 
 <template>
@@ -23,14 +30,15 @@
         <h4>для спорта</h4>
       </div>
     </div>
+    <div v-for="(cat, index) in categories" :key="index" class="categories__mobile">
+      <h4>{{ cat.title }}</h4>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .categories {
   margin-top: 89px;
-  padding-left: 120px;
-  margin-right: 120px;
   display: flex;
   gap: 22px;
   justify-content: space-between;
@@ -38,10 +46,11 @@
 .categories__left {
   display: flex;
   gap: 22px;
+  width: 65%;
 }
 .categories__left__clothes {
   background-image: url("@/assets/img/photo.png");
-  width: 383px;
+  width: 100%;
   height: 470px;
   color: white;
   font-family: "Inter", sans-serif;
@@ -51,7 +60,7 @@
 }
 .categories__left__footwear{
   background-image: url("@/assets/img/photo2.png");
-  width: 383px;
+  width: 100%;
   height: 470px;
   color: white;
   font-family: "Inter", sans-serif;
@@ -65,71 +74,71 @@
 }
 .categories__right__accessory {
   background-image: url("@/assets/img/photo3.png");
-  height: 142px;
-  width: 383px;
+ width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
 }
 .categories__right__bag {
   background-image: url("@/assets/img/photo4.png");
-  height: 142px;
-  width: 383px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
 }
 .categories__right__sport {
   background-image: url("@/assets/img/photo5.png");
-  height: 142px;
-  width: 383px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
+}
+.categories__mobile {
+  display: none;
 }
 .categories__right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
   color: white;
   font-size: 40px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  width: 32%;
 }
 .categories__right__accessory h4 ,.categories__right__bag h4 , .categories__right__sport h4 {
   padding-left: 23px;
   padding-bottom: 20px;
 }
-@media (max-width: 1340px) {
+@media (max-width: 777px) {
   .categories {
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 0;;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .categories__left,
   .categories__right {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .categories__left__clothes,
-  .categories__left__footwear,
-  .categories__right__accessory,
-  .categories__right__bag {
-    width: 200px;
-    height: 240px;
-  }
-  .categories__right__sport {
     display: none;
   }
-  .categories__right__bag {
-    background-image: url("@/assets/img/Rectangle 72.png");
-  }
-  .categories__right__accessory {
+  .categories__mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 250px;
+    width: 100%;
     background-image: url("@/assets/img/Rectangle 70.png");
-
+    background-repeat: no-repeat;
+    border-radius: 5%;
   }
-  .categories__left__clothes h4,.categories__left__footwear h4,.categories__right__accessory h4 ,.categories__right__bag h4 , .categories__right__sport h4 {
-    font-size: 20px;
-    padding: 7px 15px;
-    font-weight: 500;
+  .categories__mobile h4 {
+    color: white;
+    display: flex;
+    align-items: end;
+    padding: 15px 7px;
   }
 }
 </style>

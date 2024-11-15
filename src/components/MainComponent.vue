@@ -3,60 +3,65 @@
 
 <template>
   <div class="main">
-    <div class="header">
-      <div class="burger__menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <nav class="navigation">
-        <a href="#">Одежда</a>
-        <a href="#">Обувь</a>
-        <a href="#">Аксессуары</a>
-        <a href="#">Сумки</a>
-        <a href="#">Товары для спорта</a>
-      </nav>
-      <div class="logo">
-        <img src="@/assets/img/logo.png">
-      </div>
-      <div class="icons">
-        <i class="icon">
-          <img src="@/assets/icons/favorit.svg" alt="">
-        </i>
-        <i class="icon">
-          <img src="@/assets/icons/basket.svg" alt="">
-        </i>
-        <i class="icon">
-          <img src="@/assets/icons/search.svg" alt="">
-        </i>
-      </div>
-    </div>
+   <div class="qwe container">
+     <div class="header ">
+       <div class="burger__menu">
+         <div></div>
+         <div></div>
+         <div></div>
+       </div>
+       <nav class="navigation">
+         <a href="#">Одежда</a>
+         <a href="#">Обувь</a>
+         <a href="#">Аксессуары</a>
+         <a href="#">Сумки</a>
+         <a href="#">Товары для спорта</a>
+       </nav>
+       <div class="logo">
+         <img src="@/assets/img/logo.png">
+       </div>
+       <div class="icons">
+         <i class="icon">
+           <img src="@/assets/icons/favorit.svg" alt="">
+         </i>
+         <i class="icon">
+           <img src="@/assets/icons/basket.svg" alt="">
+         </i>
+         <i class="icon">
+           <img src="@/assets/icons/search.svg" alt="">
+         </i>
+       </div>
+     </div>
 
-    <div class="main__content">
-      <div class="main__content__text">
-        <h1 class="main__content__title">распродажа <br>
-          товаров для неё</h1>
-        <p class="main__content__sale">скидки до 90%!</p>
-      </div>
-      <button class="main__content__btn">Перейти в каталог</button>
-    </div>
-    <div class="main__slider">
-      <div class="slider__bar"></div>
-      <div class="slider__bar"></div>
-      <div class="slider__bar"></div>
-      <div class="slider__bar"></div>
-      <div class="slider__bar"></div>
-    </div>
+     <div class="main__content">
+       <div class="main__content__text">
+         <h1 class="main__content__title">распродажа <br>
+           товаров для неё</h1>
+         <p class="main__content__sale">скидки до 90%!</p>
+       </div>
+       <button class="main__content__btn">Перейти в каталог</button>
+     </div>
+     <div class="main__slider">
+       <div class="slider__bar"></div>
+       <div class="slider__bar"></div>
+       <div class="slider__bar"></div>
+       <div class="slider__bar"></div>
+       <div class="slider__bar"></div>
+     </div>
+   </div>
   </div>
 </template>
 
 <style scoped>
 .main {
   background-image: url("@/assets/img/background.png");
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -64,15 +69,16 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 28px;
-  padding-right: 128px;
-  padding-left: 128px;
+  gap: 10px;
 }
 
 .navigation {
   display: flex;
   gap: 15px;
 }
-
+.qwe{
+  height: 750px;
+}
 .navigation a {
   text-decoration: none;
   color: white;
@@ -97,8 +103,8 @@
 
 .main__content {
   margin-top: 110px;
-  padding-left: 120px;
   position: relative;
+  height: 520px;
 }
 
 .main__content__title {
@@ -111,7 +117,7 @@
 .main__content__sale {
   position: absolute;
   top: 36px;
-  left: 600px;
+  left: 470px;
   background: black;
   color: white;
   padding: 12px 22px;
@@ -139,7 +145,7 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 325px;
+  flex-grow: 1;
 }
 
 .slider__bar {
@@ -220,6 +226,7 @@
   .main__slider {
     margin: 0;
     padding-bottom: 30px;
+
   }
 }
 </style>

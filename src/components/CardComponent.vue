@@ -7,6 +7,9 @@ defineProps({
   isMobile: {
     type: Boolean,
     required: true
+  },
+  label: {
+    type: String,
   }
 });
 </script>
@@ -14,7 +17,7 @@ defineProps({
 <template>
   <div class="popular__item">
     <div class="popular__item__header">
-      <span :class="{'hot-mobile': isMobile}">{{ isMobile ? 'Популярное' : 'HOT' }}</span>
+      <span :class="{'hot-mobile': isMobile}">{{product.label}}</span>
       <img src="@/assets/img/favorite.png" alt="">
     </div>
     <img :src="product.image" alt="product image" class="popular__item__image">

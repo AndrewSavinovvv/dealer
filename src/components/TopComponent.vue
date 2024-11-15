@@ -17,7 +17,7 @@
   justify-content: center;
   gap: 19px;
   padding-top: 14px;
-  margin-bottom: 14px;
+  padding-bottom: 14px;
 }
 .top__text {
   text-transform: uppercase;
